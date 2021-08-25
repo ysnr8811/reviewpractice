@@ -11,6 +11,7 @@ def signupview(request):
         password_data = request.POST['password_data']
         user = User.objects.create_user(username_data, '', password_data)
     else:
+        writelog(User.objects.all())
         return render(request, 'signup.html', {})
     return render(request, 'signup.html')
 
