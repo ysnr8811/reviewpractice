@@ -8,3 +8,4 @@ urlpatterns = [
     path('login/', loginview, name='login'),
     path('list/', listview, name='list'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
++ static(settings.STATIC_URL, documents_root=settings.STATIC_ROOT)
